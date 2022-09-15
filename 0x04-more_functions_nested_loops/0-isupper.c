@@ -3,7 +3,8 @@
 /**
  * _isupper - main function to check uppercase char
  * @c: value of the variable type int
- * Return: 1 if successful, otherwise 0
+ * Return: on success 1
+ * Otherwise, 0 is returned, and errno is set appropriately
  */
 int _isupper(int c)
 {
