@@ -2,15 +2,15 @@
 
 /**
  * print_numbers - function to print numbers
- * @n: variable for int type
+ *
  * Return: Always 0
  */
 void print_numbers(void)
 {
-	int n;
+	int i;
 
-	for (n = 48; n <= 57; n++)
-		_putchar(n);
+	for (i = 48; i <= 57; i++)
+		_putchar(i);
 
 	_putchar('\n');
 }
