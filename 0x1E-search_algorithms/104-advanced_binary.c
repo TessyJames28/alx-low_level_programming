@@ -12,9 +12,6 @@ int recursive_bsearch(int *array, size_t l, size_t r, int value);
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (array == NULL || size == 0)
-		return (-1);
-
 	return (recursive_bsearch(array, 0, size - 1, value));
 }
 
@@ -32,6 +29,9 @@ int recursive_bsearch(int *array, size_t l, size_t r, int value)
 	size_t mid;
 	int i;
 
+	if (array == NULL)
+		return (-1);
+
 	if (l <= r)
 	{
 		mid = l + (r - l) / 2;
@@ -43,7 +43,7 @@ int recursive_bsearch(int *array, size_t l, size_t r, int value)
 
 	if (array[mid] == value)
 	{
-		if (mid > l && array[mid - 1] == value)
+		if (mid > l && array[mid] == value)
 			return (recursive_bsearch(array, l, mid, value));
 		return (mid);
 	}
